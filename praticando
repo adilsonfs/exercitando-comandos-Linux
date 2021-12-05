@@ -1,0 +1,126 @@
+
+
+
+
+
+Comandos para manipulação de diretório
+
+opções, -a, --all
+Lista todos os arquivos (inclusive os ocultos) de um diretório.
+
+-A, --almost-all
+Lista todos os arquivos (inclusive os ocultos) de um diretório, exceto o diretório atual e o de nível anterior.
+
+-B, --ignore-backups
+Não lista arquivos que terminam com ~ (Backup).
+
+--color=PARAM
+Mostra os arquivos em cores diferentes, conforme o tipo de arquivo. PARAM pode ser:
+
+never - Nunca lista em cores (mesma coisa de não usar o parâmetro --color).
+
+always - Sempre lista em cores conforme o tipo de arquivo.
+
+auto - Somente colore a listagem se estiver em um terminal.
+
+-d, --directory
+Lista os nomes dos diretórios ao invés do conteúdo.
+
+-f
+Não classifica a listagem.
+
+-F
+Insere um caracter após arquivos executáveis ('*'), diretórios ('/'), soquete ('='), link simbólico ('@') e pipe ('|'). Seu uso é útil para identificar de forma fácil tipos de arquivos nas listagens de diretórios.
+
+-G, --no-group
+Oculta a coluna de grupo do arquivo.
+
+-h, --human-readable
+Mostra o tamanho dos arquivos em Kbytes, Mbytes, Gbytes.
+
+-H
+Faz o mesmo que -h, mas usa unidades de 1000 ao invés de 1024 para especificar Kbytes, Mbytes, Gbytes.
+
+-l
+Usa o formato longo para listagem de arquivos. Lista as permissões, data de modificação, donos, grupos, etc.
+
+-n
+Usa a identificação de usuário e grupo numérica ao invés dos nomes.
+
+-L, --dereference
+Lista o arquivo original e não o link referente ao arquivo.
+
+-o
+Usa a listagem longa sem os donos dos arquivos (mesma coisa que -lG).
+
+-p
+Mesma coisa que -F, mas não inclui o símbolo '*' em arquivos executáveis. Esta opção é típica de sistemas Linux.
+
+-R
+Lista diretórios e sub-diretórios recursivamente.
+
+--full-time
+Lista data e hora completa.
+
+Classificação da listagem
+A listagem pode ser classificada usando-se as seguintes opções:
+
+-f
+Não classifica, e usa -au para listar os arquivos.
+
+-r
+Inverte a ordem de classificação.
+
+-c
+Classifica pela data de alteração.
+
+-X
+Classifica pela extensão.
+
+-U
+Não classifica, lista os arquivos na ordem do diretório.
+
+-Z
+Exibe o contexto SELinux de cada arquivo.
+
+Uma listagem feita com o comando ls -la normalmente é mostrada da seguinte maneira:
+
+-rwxr-xr--  1  gleydson user    8192 nov 4 16:00 teste
+Abaixo as explicações de cada parte:
+
+-rwxr-xr--
+São as permissões de acesso ao arquivo teste. A primeira letra (da esquerda) identifica o tipo do arquivo, se tiver um d é um diretório, se tiver um "-" é um arquivo normal.
+
+As permissões de acesso é explicada em detalhes em Capítulo 13, Permissões de acesso a arquivos e diretórios.
+
+1
+Se for um diretório, mostra a quantidade de sub-diretórios existentes dentro dele. Caso for um arquivo, será 1.
+
+gleydson
+Nome do dono do arquivo teste.
+
+user
+Nome do grupo que o arquivo teste pertence.
+
+8192
+Tamanho do arquivo (em bytes).
+
+nov
+Mês da criação/ última modificação do arquivo.
+
+4
+Dia que o arquivo foi criado.
+
+16:00
+Hora em que o arquivo foi criado/modificado. Se o arquivo foi criado há mais de um ano, em seu lugar é mostrado o ano da criação do arquivo.
+
+teste
+Nome do arquivo.
+
+Exemplos do uso do comando ls:
+
+ls - Lista os arquivos do diretório atual.
+
+ls /bin /sbin - Lista os arquivos do diretório /bin e /sbin
+
+ls -la /bin - Listagem completa (vertical) dos arquivos do diretório /bin inclusive os ocultos.
