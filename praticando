@@ -1,8 +1,8 @@
-
-
-
-
-
+#Autor: Adilson Santos
+#Data de criação: 05/12/2021
+#Data de atualização: 05/12/2021
+#Versão: 0.01
+=========================================================================================================================
 Comandos para manipulação de diretório
 
 opções, -a, --all
@@ -124,3 +124,53 @@ ls - Lista os arquivos do diretório atual.
 ls /bin /sbin - Lista os arquivos do diretório /bin e /sbin
 
 ls -la /bin - Listagem completa (vertical) dos arquivos do diretório /bin inclusive os ocultos.
+======================================================================================================================================================================================
+cd
+Entra em um diretório. Você precisa ter a permissão de execução para entrar no diretório.
+
+cd [diretório]
+
+onde:
+
+diretório - diretório que deseja entrar.
+
+Exemplos:
+
+Usando cd sem parâmetros ou cd ~, você retornará ao seu diretório de usuário (diretório home).
+
+cd /, retornará ao diretório raíz.
+
+cd -, retornará ao diretório anteriormente acessado.
+
+cd .., sobe um diretório.
+
+cd ../[diretório], sobe um diretório e entra imediatamente no próximo (por exemplo, quando você está em /usr/sbin, você digita cd ../bin, o comando cd retorna um diretório (/usr) e entra imediatamente no diretório bin (/usr/bin).
+========================================================================================================================================================================================================================================
+pwd
+Mostra o nome e caminho do diretório atual.
+
+Você pode usar o comando pwd para verificar em qual diretório se encontra (caso seu aviso de comandos não mostre isso).
+==================================================================================================================================
+mkdir
+Cria um diretório no sistema. Um diretório é usado para armazenar arquivos de um determinado tipo. O diretório pode ser entendido como uma pasta onde você guarda seus papeis (arquivos). Como uma pessoa organizada, você utilizará uma pasta para guardar cada tipo de documento, da mesma forma você pode criar um diretório vendas para guardar seus arquivos relacionados com vendas naquele local.
+
+mkdir [opções] [caminho/diretório] [caminho1/diretório1]
+
+onde:
+
+caminho
+Caminho onde o diretório será criado.
+
+diretório
+Nome do diretório que será criado.
+
+opções:, -p
+Caso os diretórios dos níveis acima não existam, eles também serão criados.
+
+--verbose
+Mostra uma mensagem para cada diretório criado. As mensagens de erro serão mostradas mesmo que esta opção não seja usada.
+
+Para criar um novo diretório, você deve ter permissão de gravação. Por exemplo, para criar um diretório em /tmp com o nome de teste que será usado para gravar arquivos de teste, você deve usar o comando "mkdir /tmp/teste".
+
+Podem ser criados mais de um diretório com um único comando (mkdir /tmp/teste /tmp/teste1 /tmp/teste2).
+=============================================================================================================================================================================================================================================
